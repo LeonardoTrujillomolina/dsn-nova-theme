@@ -1,0 +1,41 @@
+{
+    "name": "dsn-nova-theme",
+    "displayName": "DSN Nova",
+    "description": "Deep Space Nova glassmorphism theme with futuristic aerospace aesthetics",
+    "version": "1.0.0",
+    "publisher": "leonardo-trujillo",
+    "license": "MIT",
+    "engines": {
+        "vscode": "^1.75.0"
+    },
+    "categories": [
+        "Themes"
+    ],
+    "keywords": [
+        "theme",
+        "dark theme",
+        "glassmorphism",
+        "futuristic",
+        "neon",
+        "python",
+        "deep space"
+    ],
+    "contributes": {
+        "themes": [
+            {
+                "label": "DSN Nova",
+                "uiTheme": "vs-dark",
+                "path": "./themes/dsn-nova-color-theme.json"
+            }
+        ]
+    },
+    "repository": {
+        "type": "git",
+        "url": "https://github.com/dsn-nova/dsn-nova-theme"
+    },
+    "icon": "icon.png",
+    "galleryBanner": {
+        "color": "#0B1120",
+        "theme": "dark"
+    }
+}
