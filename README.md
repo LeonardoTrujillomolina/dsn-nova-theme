@@ -139,6 +139,8 @@ The DSN Nova color theme works without custom CSS.
 
 The following configuration is required only if you want the complete Glassmorphism interface.
 
+The `dsn-nova.css` file is available in the [GitHub repository](https://github.com/LeonardoTrujillomolina/dsn-nova-theme/blob/main/custom/dsn-nova.css).
+
 ### 1. Install a Custom CSS loader
 
 Install a Visual Studio Code extension capable of loading custom CSS, such as:
@@ -319,6 +321,8 @@ When reporting an issue, include:
 - Custom CSS loader name and version
 - Screenshot of the issue
 - Relevant Visual Studio Code settings
+
+Open an issue on the [GitHub repository](https://github.com/LeonardoTrujillomolina/dsn-nova-theme/issues).
 
 ---
 
