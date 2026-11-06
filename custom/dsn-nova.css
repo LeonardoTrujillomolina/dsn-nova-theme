@@ -1,0 +1,229 @@
+/* ═══════════════════════════════════════════════════════
+   DSN NOVA — Glassmorphism CSS
+   Requiere: Custom CSS and JS Loader
+   ═══════════════════════════════════════════════════════ */
+
+/* ── Variables globales ─────────────────────────────── */
+:root {
+  --dsn-glass-blur: 18px;
+  --dsn-glass-saturate: 180%;
+  --dsn-cyan: #00D4FF;
+  --dsn-orange: #FF6B35;
+  --dsn-green: #34D399;
+  --dsn-red: #F43F5E;
+}
+
+/* ── Fondo base de VS Code ──────────────────────────── */
+body {
+  background-color: #0B1120 !important;
+}
+
+/* ── Workbench container ────────────────────────────── */
+.monaco-workbench {
+  background: transparent !important;
+}
+
+/* ── Activity bar ───────────────────────────────────── */
+.activitybar > .content {
+  backdrop-filter: blur(var(--dsn-glass-blur)) saturate(var(--dsn-glass-saturate)) !important;
+  -webkit-backdrop-filter: blur(var(--dsn-glass-blur)) saturate(var(--dsn-glass-saturate)) !important;
+  background: rgba(5, 10, 23, 0.55) !important;
+  border-right: 1px solid rgba(0, 212, 255, 0.15) !important;
+}
+
+/* ── Sidebar ────────────────────────────────────────── */
+.sidebar > .composite {
+  backdrop-filter: blur(var(--dsn-glass-blur)) saturate(var(--dsn-glass-saturate)) !important;
+  -webkit-backdrop-filter: blur(var(--dsn-glass-blur)) saturate(var(--dsn-glass-saturate)) !important;
+  background: rgba(11, 18, 36, 0.55) !important;
+  border-right: 1px solid rgba(0, 212, 255, 0.18) !important;
+}
+
+/* ── Editor tabs ────────────────────────────────────── */
+.tabs-container {
+  backdrop-filter: blur(12px) saturate(160%) !important;
+  -webkit-backdrop-filter: blur(12px) saturate(160%) !important;
+  background: rgba(17, 26, 45, 0.75) !important;
+  border-bottom: 1px solid rgba(0, 212, 255, 0.15) !important;
+}
+
+.tab.active {
+  background: rgba(26, 41, 66, 0.85) !important;
+  border-top: 2px solid #FF3D21 !important;
+}
+
+.tab:not(.active) {
+  background: rgba(16, 24, 39, 0.55) !important;
+}
+
+/* ── Editor principal ───────────────────────────────── */
+.editor-container .overflow-guard {
+  backdrop-filter: blur(8px) saturate(140%) !important;
+  -webkit-backdrop-filter: blur(8px) saturate(140%) !important;
+  background: rgba(11, 17, 32, 0.60) !important;
+}
+
+/* ── Panel (terminal, output) ───────────────────────── */
+.panel > .composite.title {
+  backdrop-filter: blur(var(--dsn-glass-blur)) saturate(var(--dsn-glass-saturate)) !important;
+  -webkit-backdrop-filter: blur(var(--dsn-glass-blur)) saturate(var(--dsn-glass-saturate)) !important;
+  background: rgba(8, 15, 32, 0.70) !important;
+  border-top: 1px solid rgba(0, 212, 255, 0.20) !important;
+}
+
+.panel .composite {
+  backdrop-filter: blur(14px) saturate(160%) !important;
+  -webkit-backdrop-filter: blur(14px) saturate(160%) !important;
+  background: rgba(7, 14, 30, 0.65) !important;
+}
+
+/* ── Title bar ──────────────────────────────────────── */
+.titlebar {
+  backdrop-filter: blur(20px) saturate(200%) !important;
+  -webkit-backdrop-filter: blur(20px) saturate(200%) !important;
+  background: rgba(6, 11, 24, 0.70) !important;
+  border-bottom: 1px solid rgba(0, 212, 255, 0.12) !important;
+}
+
+/* ── Status bar ─────────────────────────────────────── */
+.statusbar {
+  backdrop-filter: blur(20px) saturate(200%) !important;
+  -webkit-backdrop-filter: blur(20px) saturate(200%) !important;
+  background: rgba(6, 10, 22, 0.85) !important;
+  border-top: 1px solid rgba(0, 212, 255, 0.12) !important;
+}
+
+/* ── Widgets (hover, suggest, find) ─────────────────── */
+.monaco-editor .suggest-widget,
+.monaco-editor .parameter-hints-widget {
+  backdrop-filter: blur(20px) saturate(180%) !important;
+  -webkit-backdrop-filter: blur(20px) saturate(180%) !important;
+  background: rgba(16, 26, 45, 0.88) !important;
+  border: 1px solid rgba(0, 212, 255, 0.22) !important;
+  border-radius: 8px !important;
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.60) !important;
+}
+
+.monaco-editor-hover {
+  backdrop-filter: blur(20px) saturate(180%) !important;
+  -webkit-backdrop-filter: blur(20px) saturate(180%) !important;
+  background: rgba(16, 26, 45, 0.90) !important;
+  border: 1px solid rgba(0, 212, 255, 0.25) !important;
+  border-radius: 8px !important;
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.60) !important;
+}
+
+/* ── Quick input / Command palette ──────────────────── */
+.quick-input-widget {
+  backdrop-filter: blur(40px) saturate(220%) brightness(1.1) !important;
+  -webkit-backdrop-filter: blur(40px) saturate(220%) brightness(1.1) !important;
+  background: rgba(11, 20, 40, 0.55) !important;
+  border: 1px solid rgba(0, 212, 255, 0.35) !important;
+  border-radius: 12px !important;
+  box-shadow:
+    0 0 0 1px rgba(0, 212, 255, 0.10),
+    0 20px 60px rgba(0, 0, 0, 0.70),
+    0 0 30px rgba(0, 212, 255, 0.08) !important;
+}
+
+.quick-input-widget .monaco-inputbox {
+  background: rgba(0, 212, 255, 0.06) !important;
+  border: 1px solid rgba(0, 212, 255, 0.30) !important;
+  border-radius: 6px !important;
+}
+
+.quick-input-widget .monaco-list-row:hover {
+  background: rgba(0, 212, 255, 0.10) !important;
+}
+
+.quick-input-widget .monaco-list-row.focused {
+  background: rgba(0, 212, 255, 0.18) !important;
+  border-left: 2px solid #00D4FF !important;
+}
+
+/* ── Menús contextuales ──────────────────────────────── */
+.monaco-menu .monaco-scrollable-element {
+  backdrop-filter: blur(20px) saturate(180%) !important;
+  -webkit-backdrop-filter: blur(20px) saturate(180%) !important;
+  background: rgba(16, 26, 45, 0.90) !important;
+  border: 1px solid rgba(0, 212, 255, 0.20) !important;
+  border-radius: 8px !important;
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.60) !important;
+}
+
+/* ── Notificaciones ──────────────────────────────────── */
+.notifications-toasts .notification-toast {
+  backdrop-filter: blur(20px) saturate(180%) !important;
+  -webkit-backdrop-filter: blur(20px) saturate(180%) !important;
+  background: rgba(16, 26, 45, 0.88) !important;
+  border: 1px solid rgba(0, 212, 255, 0.22) !important;
+  border-radius: 8px !important;
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.60) !important;
+}
+
+/* ── Scrollbar neon ──────────────────────────────────── */
+.monaco-scrollable-element > .scrollbar > .slider {
+  background: rgba(0, 212, 255, 0.18) !important;
+  border-radius: 6px !important;
+  border: 1px solid rgba(0, 212, 255, 0.35) !important;
+  box-shadow:
+    0 0 6px rgba(0, 212, 255, 0.40),
+    0 0 12px rgba(0, 212, 255, 0.20),
+    inset 0 0 4px rgba(0, 212, 255, 0.10) !important;
+  transition: all 0.2s ease !important;
+}
+
+.monaco-scrollable-element > .scrollbar > .slider:hover {
+  background: rgba(0, 212, 255, 0.35) !important;
+  border: 1px solid rgba(0, 212, 255, 0.70) !important;
+  box-shadow:
+    0 0 10px rgba(0, 212, 255, 0.70),
+    0 0 20px rgba(0, 212, 255, 0.40),
+    0 0 35px rgba(0, 212, 255, 0.20),
+    inset 0 0 6px rgba(0, 212, 255, 0.15) !important;
+}
+
+/* ── Breadcrumb ──────────────────────────────────────── */
+.breadcrumbs-control {
+  backdrop-filter: blur(12px) !important;
+  -webkit-backdrop-filter: blur(12px) !important;
+  background: rgba(15, 23, 42, 0.65) !important;
+}
+
+/* ── Sticky scroll ───────────────────────────────────── */
+.sticky-widget {
+  backdrop-filter: blur(16px) saturate(160%) !important;
+  -webkit-backdrop-filter: blur(16px) saturate(160%) !important;
+  background: rgba(11, 17, 32, 0.80) !important;
+  border-bottom: 1px solid rgba(0, 212, 255, 0.15) !important;
+}
+
+/* ── Notebook cells ──────────────────────────────────── */
+.cell-editor-container {
+  backdrop-filter: blur(8px) !important;
+  -webkit-backdrop-filter: blur(8px) !important;
+  background: rgba(16, 26, 45, 0.75) !important;
+  border-radius: 6px !important;
+  border: 1px solid rgba(0, 212, 255, 0.12) !important;
+}
+
+/* ── Glow sutil en cursor ────────────────────────────── */
+.cursor {
+  box-shadow: 0 0 8px rgba(255, 61, 33, 0.60),
+              0 0 2px rgba(255, 61, 33, 0.90) !important;
+}
+
+/* ── Glow en línea activa ────────────────────────────── */
+.monaco-editor .current-line {
+  box-shadow: inset 0 0 0 1px rgba(0, 212, 255, 0.10) !important;
+}
+
+/* ── Debug toolbar ───────────────────────────────────── */
+.debug-toolbar {
+  backdrop-filter: blur(20px) saturate(180%) !important;
+  -webkit-backdrop-filter: blur(20px) saturate(180%) !important;
+  background: rgba(16, 26, 45, 0.88) !important;
+  border: 1px solid rgba(255, 107, 53, 0.28) !important;
+  border-radius: 8px !important;
+  box-shadow: 0 4px 24px rgba(0, 0, 0, 0.50) !important;
+}
